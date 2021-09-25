@@ -1,0 +1,40 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-6-offset-lg-3">
+            <div class="card">
+                <div class="card body">
+                    <span class="titulo">{{titulo}}</span>
+                        <form [formGroup]="peliculaForm" (ngSubmit)="agregarPelicula()">
+                            <div class="mb-3">                             
+                              <input formControlName="titulo" class="form-control form-control-lg" type="text" placeholder="Titulo">
+                              <div *ngIf="peliculaForm.get('titulo')?.hasError('required') && peliculaForm.get('titulo')?.touched" class="text-danger">                        
+                                  <span>Este campo es <strong>obligatorio</strong></span>
+                              </div>
+                            </div>
+                            <div class="mb-3">                             
+                                <input formControlName="director" class="form-control form-control-lg" type="text" placeholder="Director">
+                                <div *ngIf="peliculaForm.get('director')?.hasError('required') && peliculaForm.get('director')?.touched" class="text-danger">                    
+                                    <span>Este campo es <strong>obligatorio</strong></span>                                 
+                                </div>                                                   
+                              </div>
+                              <div class="mb-3">                             
+                                <input formControlName="anio" class="form-control form-control-lg" type="number" placeholder="Año">
+                                <div *ngIf="peliculaForm.get('anio')?.hasError('required') && peliculaForm.get('anio')?.touched" class="text-danger">
+                                    <span>Este campo es <strong>obligatorio</strong></span>
+                                </div>
+                              </div>
+                              <div class="mb-3">                             
+                                <input formControlName="rating" class="form-control form-control-lg" type="number" placeholder="IMDb Rating">
+                                <div *ngIf="peliculaForm.get('rating')?.hasError('required') && peliculaForm.get('rating')?.touched" class="text-danger">
+                                    <span>Este campo es <strong>obligatorio</strong></span>
+                                </div>
+                              </div>
+                            <button [disabled]="peliculaForm.invalid" type="submit" class="btn btn-success float-end">{{boton}}</button>
+                            <button type="button" routerLink="/" class="btn btn-primary float-start">Volver</button>                          
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
