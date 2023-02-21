@@ -7,7 +7,7 @@ Permite acceder y modificar una base de datos de películas (directores, año de
 
 Basado en el siguiente tutorial: https://www.youtube.com/watch?v=aLbDBaFYoLY&ab_channel=TomasRuizDiaz 
 
-Pueden verla funcionando en el siguiente link: https://crudmovies01.herokuapp.com/
+Pueden verla funcionando en el siguiente link: PENDIENTE
 
 ## Instrucciones para correrlo localmente
 
