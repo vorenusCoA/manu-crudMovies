@@ -8,7 +8,7 @@ import { Pelicula } from '../Models/pelicula';
 })
 export class PeliculaService {
 
-  url = "http://localhost:3000/api/peliculas/"
+  url = "/api/peliculas/"
 
   constructor(private http: HttpClient) { }
 
